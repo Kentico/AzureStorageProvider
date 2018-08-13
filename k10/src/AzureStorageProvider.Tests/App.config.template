@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <appSettings>
+    <add key="CMSHashStringSalt" value="2e154dc9-3207-4ded-a90b-164ce4da6c5b"/>
+
+    <add key="CMSAzureAccountName" value="" />
+    <add key="CMSAzureCDNEndpoint" value=""/>
+    <add key="CMSAzurePublicContainer" value="true"/>
+    <add key="CMSAzureSharedKey" value=""/>
+    <add key="CMSAzureRootContainer" value=""/>
+  </appSettings>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral"/>
+        <bindingRedirect oldVersion="0.0.0.0-6.0.0.0" newVersion="6.0.0.0"/>
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6"/></startup></configuration>

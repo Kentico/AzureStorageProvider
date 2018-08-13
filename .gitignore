@@ -1,0 +1,43 @@
+
+#ignore thumbnails created by windows
+Thumbs.db
+#Ignore files build by Visual Studio
+*.obj
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.tmp
+*.dat
+CMS/config/*.config
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio 2015 cache/options directory
+.vs/
+
+# Temporary files
+# packages
+/packages
+
+#Kentico projects
+CMS10
+CMS11
+
+#app config file of test project
+k10/src/AzureStorageProvider.Tests/App.config
+k11/src/AzureStorageProvider.Tests/App.config

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B40D30B8-51B1-4568-B3AD-13ED85F7FF69}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AzureStorageProvider</RootNamespace>
+    <AssemblyName>AzureStorageProvider</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CMS.Base, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CMS10\Lib\CMS.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Core, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CMS10\Lib\CMS.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DataEngine, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CMS10\Lib\CMS.DataEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.EventLog, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CMS10\Lib\CMS.EventLog.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.FileSystemStorage">
+      <HintPath>..\..\..\CMS10\Lib\CMS.FileSystemStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Helpers, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CMS10\Lib\CMS.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.IO, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CMS10\Lib\CMS.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Routing.Web, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CMS10\Lib\CMS.Routing.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Scheduler, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CMS10\Lib\CMS.Scheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=9.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\WindowsAzure.Storage.9.1.0\lib\net45\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AzureStorageProviderModule.cs" />
+    <Compile Include="Azure\BlobCacheService.cs" />
+    <Compile Include="Azure\CloudBlobClient.cs" />
+    <Compile Include="Azure\CloudBlobContainerService.cs" />
+    <Compile Include="Azure\CloudBlobService.cs" />
+    <Compile Include="Azure\CloudDirectoryService.cs" />
+    <Compile Include="Azure\ICloudBlobClient.cs" />
+    <Compile Include="Azure\ICloudBlobContainerService.cs" />
+    <Compile Include="Azure\ICloudBlobService.cs" />
+    <Compile Include="Azure\ICloudDirectoryService.cs" />
+    <Compile Include="Handlers\FileHandler.cs" />
+    <Compile Include="Helpers\BlobAttributesHelper.cs" />
+    <Compile Include="Azure\IBlobCacheService.cs" />
+    <Compile Include="Helpers\BlobContainerHelper.cs" />
+    <Compile Include="Helpers\BlobHelper.cs" />
+    <Compile Include="Helpers\BlobCacheHelper.cs" />
+    <Compile Include="Helpers\DirectoryHelper.cs" />
+    <Compile Include="Helpers\EncodingHelper.cs" />
+    <Compile Include="Helpers\LoggingHelper.cs" />
+    <Compile Include="Helpers\SettingsKeys.cs" />
+    <Compile Include="Helpers\SynchronizationHelper.cs" />
+    <Compile Include="Helpers\WebConfigKeys.cs" />
+    <Compile Include="Models\AccountInfo.cs" />
+    <Compile Include="Helpers\AzurePathHelper.cs" />
+    <Compile Include="Models\Blob.cs" />
+    <Compile Include="Collections\BlobCollection.cs" />
+    <Compile Include="Models\BlobAttributes.cs" />
+    <Compile Include="Models\BlobCacheType.cs" />
+    <Compile Include="Models\BlobContainer.cs" />
+    <Compile Include="Collections\BlobContainerCollection.cs" />
+    <Compile Include="Models\BlobDirectory.cs" />
+    <Compile Include="Collections\BlobDirectoryCollection.cs" />
+    <Compile Include="Models\BlobMetadataEnum.cs" />
+    <Compile Include="Helpers\Collection.cs" />
+    <Compile Include="Helpers\IObjectWithName.cs" />
+    <Compile Include="Helpers\Singleton.cs" />
+    <Compile Include="IO\Directory.cs" />
+    <Compile Include="IO\DirectoryInfo.cs" />
+    <Compile Include="IO\File.cs" />
+    <Compile Include="IO\FileInfo.cs" />
+    <Compile Include="IO\FileStream.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\CacheClearingTask.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
