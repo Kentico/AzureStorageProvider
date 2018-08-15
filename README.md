@@ -1,6 +1,8 @@
-# AzureStorageProvider
+# AzureStorageProvider for Kentico EMS
 
-This provider is designed to replace standard Kentico Azure provider to ensure faster loading times and smooth experience when working with larger sets of data such as Media Library files.
+This provider is designed to replace standard Kentico Azure provider in Kentico EMS to ensure faster loading times and smooth experience when working with larger sets of data such as Media Library files.
+
+Currently versions 10 and 11 od Kentico EMS are supported.
 
 # Get the provider
 Follow these steps if you just want to leverage the provider and not care about its implementation / compiling / etc.
