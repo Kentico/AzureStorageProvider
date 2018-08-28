@@ -32,3 +32,4 @@ Want to improve Azure Storage Provider? Great! Read the [contributing guidelines
 
 If anything feels wrong or incomplete, please let us know. Create a new [issue](https://github.com/Kentico/AzureStorageProvider/issues/new) or submit a [pull request](https://help.github.com/articles/using-pull-requests/).
 
+![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/AzureStorageProvider?pixel)
