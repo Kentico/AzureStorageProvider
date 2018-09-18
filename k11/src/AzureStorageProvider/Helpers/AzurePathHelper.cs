@@ -2,6 +2,7 @@
 using CMS.Base;
 using CMS.Helpers;
 using System;
+using System.Web;
 
 namespace AzureStorageProvider.Helpers
 {
@@ -50,11 +51,31 @@ namespace AzureStorageProvider.Helpers
 
             path = GetValidPath(path);
 
-            // remove root container
             if (!path.StartsWith(fileSystemPath, StringComparison.OrdinalIgnoreCase))
-                throw new InvalidOperationException("Path does not start with file system prefix.");
-
-            path = path.Substring(fileSystemPath.Length);
+            {
+                // path is relative
+                if (fileSystemPath.StartsWith(path, StringComparison.OrdinalIgnoreCase))
+                {
+                    // path is parent to our app
+                    return string.Empty;
+                }
+                else if (path.StartsWith("~"))
+                {
+                    // path is relative with ~
+                    path = path.TrimStart('~');
+                    path = path.TrimStart('/');
+                }
+                else
+                {
+                    // path is relative with/without slash
+                    path = path.TrimStart('/');
+                }
+            }
+            else
+            {
+                // remove root container
+                path = path.Substring(fileSystemPath.Length);
+            }
 
             path = GetValidPathForwardSlashes(path);
 
@@ -98,7 +119,7 @@ namespace AzureStorageProvider.Helpers
         {
             // /cmsstorage/dir/blob.txt -> dir/blob.txt
 
-            var path = URLHelper.URLDecode(uri.AbsolutePath);
+            var path = HttpUtility.UrlDecode(uri.AbsolutePath);
             var container = $"/{AccountInfo.Instance.RootContainer}/";
 
             // remove root container

@@ -13,7 +13,6 @@ namespace AzureStorageProvider
     {
         private DateTime _creationTime;
         private string _fullName;
-        private string _blobName;
         private string _name;
         public override DateTime CreationTime { get { return _creationTime; } set { _creationTime = value; } }
         public override bool Exists
@@ -52,9 +51,7 @@ namespace AzureStorageProvider
 
         public DirectoryInfo(string path)
         {
-            var dir = new Directory();
             Name = CMS.IO.Path.GetFileName(path);
-            _blobName = AzurePathHelper.GetBlobPath(path);
             FullName = path;
         }
 
