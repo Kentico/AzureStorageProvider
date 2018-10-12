@@ -13,7 +13,6 @@ Follow these steps if you just want to leverage the provider and not care about 
 # Installation
 If you wish to participate on the implementation, follow these steps:
 - Decide which version you want to participate on
-- Copy Lib folder from Kentico instance (of target version) into folder CMS{versionNumber}, e.g. CMS10 for Kentico 10.
 - Open solution file of target version (e.g. k10.sln) in Visual Studio and make sure all references are loaded correctly
 - Copy k{versionNumber}/src/AzureStorageProvider.Tests/App.config.template file as App.config and fill Azure BLOB storage credentials for testing
 
