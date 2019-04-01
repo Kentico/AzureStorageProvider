@@ -34,14 +34,8 @@ CMS/config/*.config
 # packages
 /packages
 
-#Kentico projects
-CMS10
-CMS11
-
 #app config file of test project
-k10/src/AzureStorageProvider.Tests/App.config
-k11/src/AzureStorageProvider.Tests/App.config
+k12/src/AzureStorageProvider.Tests/App.config
 
 #tests folder
-k10/src/CMS
-k11/src/CMS
+k12/src/CMS
