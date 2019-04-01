@@ -6,6 +6,7 @@ using System.IO;
 using AzureStorageProvider.Collections;
 using CMS;
 using AzureStorageProvider.Azure;
+using System.Web;
 
 [assembly: RegisterImplementation(typeof(ICloudBlobService), typeof(CloudBlobService))]
 
@@ -88,6 +89,9 @@ namespace AzureStorageProvider.Azure
         {
             var blobReference = GetBlobReference(path);
             UpdateMetadata(blobReference, metadata);
+
+            var mimeType = MimeMapping.GetMimeMapping(path);
+            blobReference.Properties.ContentType = mimeType;
 
             blobReference.UploadFromStream(stream);
             return BlobAttributesHelper.MapAttributes(blobReference);
