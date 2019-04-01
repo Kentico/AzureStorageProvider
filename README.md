@@ -2,29 +2,22 @@
 
 This provider is designed to replace standard Kentico Azure provider in Kentico EMS to ensure faster loading times and smooth experience when working with larger sets of data such as Media Library files.
 
-Currently versions 10 and 11 od Kentico EMS are supported.
+Currently version 12 of Kentico EMS is supported.
 
-# Get the provider
-Follow these steps if you just want to leverage the provider and not care about its implementation / compiling / etc.
-- Download already compiled libraries in 7zip package for your version of Kentico
-- Copy them into BIN folder of your Kentico installation
-- Follow the instructions in instructions.docx file
+# Use the provider
+If you want to use the provider in your Kentico EMS solution:
+* install the provider using [NuGet package](https://github.com/Kentico/AzureStorageProvider/blob/master/k12/KenticoAzureStorageProvider.12.0.0.nupkg)
+* configure the provider according to [instructions](https://github.com/Kentico/AzureStorageProvider/blob/master/INSTRUCTIONS.md)
 
 # Installation
 If you wish to participate on the implementation, follow these steps:
-- Decide which version you want to participate on
-- Open solution file of target version (e.g. k10.sln) in Visual Studio and make sure all references are loaded correctly
-- Copy k{versionNumber}/src/AzureStorageProvider.Tests/App.config.template file as App.config and fill Azure BLOB storage credentials for testing
+* open solution file of the provider in Visual Studio and make sure all references are loaded correctly
+* to verify your changes, run tests
 
 If you wish to test the provider with your Kentico solution, follow these steps:
-- Build AzureStorageProvider project
-- Copy AzureStorageProvider.dll and Microsoft.WindowsAzure.Storage.dll into bin folder of your website
-
-OR to enable in-time debugging:
-
-- Open your Kentico solution
-- Add existing project AzureStorageProvider (optionally change references to point to Lib folder of your instance)
-- Follow the instructions in instructions.docx file
+* open your Kentico solution in Visual Studio
+* add AzureStorageProvider projects using SLN file in this repository
+* configure the solution according to [instructions](https://github.com/Kentico/AzureStorageProvider/blob/master/INSTRUCTIONS.md)
 
 # Contributing
 Want to improve Azure Storage Provider? Great! Read the [contributing guidelines](https://github.com/Kentico/AzureStorageProvider/blob/master/CONTRIBUTING.md).

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Kentico.AzureStorageProvider</id>
+    <version>12.0.0</version>
+    <authors>Kentico</authors>
+    <owners>Kentico</owners>
+    <projectUrl>https://github.com/Kentico/AzureStorageProvider</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Replacement for standard Kentico EMS provider adding metadata caching support.</description>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>Kentico EMS Azure BLOB storage</tags>
+    <dependencies>
+      <dependency id="Kentico.Libraries" version="12.0.0" />
+      <dependency id="Microsoft.Azure.Storage.Blob" version="9.4.2" />
+      <dependency id="WindowsAzure.Storage" version="9.1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+	<file src="src\AzureStorageProvider\bin\Debug\AzureStorageProvider.dll" target="lib\net461\AzureStorageProvider.dll" />
+  </files>
+</package>
