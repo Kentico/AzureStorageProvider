@@ -5,62 +5,75 @@ This provider is designed to replace standard Kentico Azure provider to ensure f
 ## Web.config keys
 
 * web.config key name
-	** value1|value2|*recommended value 3*
+	* value1|value2|**recommended value 3**
+	
 	Note about usage of this key
 	
 ---
 
 * CMSAzurePublicContainer
-	** True|False
+	* True|False
+	
 	Pick true or false based on Azure container settings.
 
 * CMSAzureRootContainer
-	** {containerName}
+	* {containerName}
+	
 	Add name of BLOB container.
 	
 * CMSAzureCDNEndpoint
-	** {endpointURL}
+	* {endpointURL}
+	
 	Add endpoint URL.
 
 * CMSAzureAccountName
-	** {accountName}
+	* {accountName}
+	
 	Add account name.
 	
 * CMSAzureSharedKey
-	** {accountSharedKey}
+	* {accountSharedKey}
+	
 	Add account shared key.
-
+	
 * CMSExtenalStorageName
-	** {azure}
+	* {azure}
+	
 	Add external storage name – pick one for this provider, e.g. azure.
 	
 * CMSStorageProviderAssembly
-	** AzureStorageProvider
+	* AzureStorageProvider
 
 * CMSAzureCachePath
-	** {cachePath}
+	* {cachePath}
+	
 	Folder in root of your website to store cached files from BLOB storage.
 	
 * AzureStorageProviderCacheType
-	** None
-	** Memory
-	** FileSystem
+	* None
+	* Memory
+	* FileSystem
+	
 	Pick one of the cache storage options to cache *data* of BLOBs
 
 * AzureStorageProviderCacheClearMinutes
-	** {minutes}
+	* {minutes}
+	
 	How long should file contents be cached?
 
 * AzureStorageProviderIgnoreLastWriteTime
-	** True|*False*
+	* True|**False**
+	
 	Instead of evaluating last write time of folder to max of all blobs last write times, DateTime.MinValue is used. This ensures backwards compatibility with the original provider. Also for Kentico features, this value is not needed, so keep it set to true by default.
 
 * AzureStorageProviderForceLowercase
-	** True|*False*
+	* True|**False**
+	
 	Before writing/reading files all file names will be lowercased. This ensures backwards compatibility with the original provider.
 
 * AzureStorageProviderInitializeAtAppStart
-	** True|*False*
+	* True|**False**
+	
 	If true, provider will fetch all metadata at application start.
 
 ### Example:
