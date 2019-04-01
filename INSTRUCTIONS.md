@@ -89,7 +89,8 @@ This provider is designed to replace standard Kentico Azure provider to ensure f
 <add key="AzureStorageProviderCacheClearMinutes" value="0" />
 <add key="AzureStorageProviderIgnoreLastWriteTime" value="true" />
 <add key="AzureStorageProviderForceLowercase" value="false" />
-<add key="AzureStorageProviderInitializeAtAppStart" value="false" />```
+<add key="AzureStorageProviderInitializeAtAppStart" value="false" />
+```
 
 ## How does it work?
 This provider works lazily and keeps track of files and folders that were requested to be initialized. Metadata of all files required by the website are stored in application memory and live there throughout the whole life cycle of an application pool.
