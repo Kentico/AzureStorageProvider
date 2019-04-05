@@ -24,4 +24,11 @@ Want to improve Azure Storage Provider? Great! Read the [contributing guidelines
 
 If anything feels wrong or incomplete, please let us know. Create a new [issue](https://github.com/Kentico/AzureStorageProvider/issues/new) or submit a [pull request](https://help.github.com/articles/using-pull-requests/).
 
+# Generate NuGet package
+There is already .nuspec file in this repository. To generate a new NuGet package:
+
+* navigate to `K12` folder
+* if you don't have NuGet CLI installed, download it from [nuget.org](https://nuget.org/downloads)
+* run `nuget pack`
+
 ![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/AzureStorageProvider?pixel)
