@@ -29,6 +29,6 @@ There is already .nuspec file in this repository. To generate a new NuGet packag
 
 * navigate to `K12` folder
 * if you don't have NuGet CLI installed, download it from [nuget.org](https://nuget.org/downloads)
-* run `nuget pack`
+* run `nuget pack Package.nuspec`
 
 ![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/AzureStorageProvider?pixel)
